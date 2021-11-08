@@ -1,7 +1,7 @@
-import GUI
+import Gui
 
 def main():
-    GUI.GUI()
+    Gui.DisplayTheProgram()
 
 if __name__ == '__main__':
     main()
