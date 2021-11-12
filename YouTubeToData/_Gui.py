@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-import collectChat
+import _CollectChat
 
 # We don't need class, since we are not going to create instances
 class DisplayTheProgram:
@@ -7,7 +7,7 @@ class DisplayTheProgram:
         layout = [
             [sg.Text("YouTube Link?")],
             [sg.Input()],
-            [sg.Text("nameOfStreamer-VideoName")],
+            [sg.Text("nameOfStreamer:VideoName")],
             [sg.Input()],
             [sg.Button('Submit')]
         ]
@@ -23,5 +23,5 @@ class DisplayTheProgram:
         nameOfChatFile = userInput[1]
 
         window.close()
-        collectChat.collectChat(source, YouTubeLink, nameOfChatFile)
+        _CollectChat.collectChat(source, YouTubeLink, nameOfChatFile)
         window.close()
