@@ -2,8 +2,9 @@ import string
 from itertools import islice
 
 class CalculateData:
-    def __init__(self, file, source, nameOfCommentFile):
-        self.file = open(file) # Place filer we had into an instance variable
+    def __init__(self, data_file_name, link_of_youtube_video, nameOfCommentFile):
+
+        self.file = open(data_file_name) # Place filer we had into an instance variable
         # Have multiple data points to look for
         self.declareDics()  # Create the covers
         self.timeToDict() # Create the original
