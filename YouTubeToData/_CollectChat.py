@@ -32,7 +32,11 @@ class collectChat:
 
         print("Source: {}\n nameOfCommentFile: {}".format(self.link_of_youtube_video, str(self.file_name) + 'ChatData.txt'))
         self.data_file_name = 'watson:MythOrTreatChatData.txt'
+
         _GetDataAndStars.CalculateData(self.data_file_name, self.link_of_youtube_video, self.file_name)
+
+
+
 
 
 
