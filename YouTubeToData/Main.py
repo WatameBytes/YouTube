@@ -2,8 +2,6 @@ import _Gui
 import _CollectChat
 
 def main():
-    # TODO We have class/instance methods yet we are not treating them as objects...
-    # TODO Learn about Pyton constructors and refactor this code
     # Turn all of this data into an object to easily call it and deal with it
     # Remove all the selfs and classes, this isn't needed
     # Just create a data object that we can pass
