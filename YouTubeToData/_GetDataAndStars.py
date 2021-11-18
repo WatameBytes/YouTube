@@ -5,6 +5,58 @@ originalDict = dict()
 newDict = dict()
 nSplitter = 20
 
+
+
+_10SplitDict = dict()
+_30SplitDict = dict()
+_50SplitDict = dict()
+_70SplitDict = dict()
+_90SplitDict = dict()
+_110SplitDict = dict()
+_130SplitDict = dict()
+_150SplitDict = dict()
+_170SplitDict = dict()
+_190SplitDict = dict()
+
+def writeToData(starData, newDict, nameOfDict):
+    starData.write('{} splitter'.format(nameOfDict))
+    dic2 = dict(sorted(newDict.items(), key=lambda x: x[1]))
+    try:
+        starData.write("___HHMMSS\n")
+        starData.write(("1st: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-1], list(dic2.values())[-1])))
+        starData.write(("2nd: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-2], list(dic2.values())[-2])))
+        starData.write(("3rd: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-3], list(dic2.values())[-3])))
+        starData.write(("4th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-4], list(dic2.values())[-4])))
+        starData.write(("5th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-5], list(dic2.values())[-5])))
+        starData.write(("6th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-6], list(dic2.values())[-6])))
+        starData.write(("7th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-7], list(dic2.values())[-7])))
+        starData.write(("8th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-8], list(dic2.values())[-8])))
+        starData.write(("9th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-9], list(dic2.values())[-9])))
+        starData.write(("10th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-10], list(dic2.values())[-10])))
+        starData.write(("10th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-11], list(dic2.values())[-11])))
+        starData.write(("10th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-12], list(dic2.values())[-12])))
+        starData.write(("10th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-13], list(dic2.values())[-13])))
+        starData.write(("10th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-14], list(dic2.values())[-14])))
+        starData.write(("10th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-15], list(dic2.values())[-15])))
+
+    except:
+        pass
+
+    sumOfData = sum(dic2.values())
+    numOfData = len(dic2)
+    avg = (sumOfData / numOfData) + nSplitter
+    starData.write("Avg: {}\n".format(avg))
+    starData.write('\n')
+
+    # Write to the text file stars :: Perhaps didive by 10 or something to lower it's meaning 270 -> 27 stars
+    # for x, y in newDict.items():
+    #     starData.write(("Start at {} *:{}\t".format(x, y)))
+    #     for n in range(y):
+    #         starData.write(('*'))
+    #     starData.write("\n")
+
+    starData.write("============================================\n\n")
+
 def chunks(data, SIZE=1000000):
     it = iter(data)
     for i in range(0, len(data), SIZE):
@@ -15,8 +67,7 @@ def printDic(dictionary):
         print(x)
 
 # Copy the values of item into a dictionary we can use for ourselves
-def copyOrgignalToNew(d, splitter):
-    print('INSIDE LOOP')
+def copyOrgignalToNew(d, newDict, splitter):
     for item in chunks(d, splitter):
         # print('Name: ', list(item.keys())[0] ,item, 'sum is ', sum(item.values()))
         # Key would be the time it starts with the sum of the values between it
@@ -34,22 +85,22 @@ class CalculateData:
 
         self.file = open(data_file_name) # Place filer we had into an instance variable
         # Have multiple data points to look for
-        self.declareDics()  # Create the covers
+        # self.declareDics()  # Create the covers
 
         self.timeToDict() # Create the original
-
-        improvedDicts = [
-            self._10SplitDict,
-            self._30SplitDict,
-            self._50SplitDict,
-            self._70SplitDict,
-            self._90SplitDict,
-            self._110SplitDict,
-            self._130SplitDict,
-            self._150SplitDict,
-            self._170SplitDict,
-            self._190SplitDict
-        ]
+        #
+        # improvedDicts = [
+        #     self._10SplitDict,
+        #     self._30SplitDict,
+        #     self._50SplitDict,
+        #     self._70SplitDict,
+        #     self._90SplitDict,
+        #     self._110SplitDict,
+        #     self._130SplitDict,
+        #     self._150SplitDict,
+        #     self._170SplitDict,
+        #     self._190SplitDict
+        # ]
         valuesForDicts = [
             10, 30, 50, 70, 90, 110, 130, 150, 170, 190
         ]
@@ -59,46 +110,44 @@ class CalculateData:
         # Make a for loop
 
 
+        # TODO : Please refactor this :: Im getting triggered
 
         printDic(originalDict)
 
-        copyOrgignalToNew(originalDict, nSplitter)
+        copyOrgignalToNew(originalDict, newDict,20)
 
-        starData = open('test.txt', 'w')
+        copyOrgignalToNew(originalDict, _10SplitDict, 10)
+        copyOrgignalToNew(originalDict, _30SplitDict, 30)
+        copyOrgignalToNew(originalDict, _50SplitDict, 50)
+        copyOrgignalToNew(originalDict, _70SplitDict, 70)
+        copyOrgignalToNew(originalDict, _90SplitDict, 90)
+        copyOrgignalToNew(originalDict, _110SplitDict, 110)
+        copyOrgignalToNew(originalDict, _130SplitDict, 130)
+        copyOrgignalToNew(originalDict, _150SplitDict, 150)
+        copyOrgignalToNew(originalDict, _170SplitDict, 170)
+        copyOrgignalToNew(originalDict, _190SplitDict, 190)
+
+        # Empties the file
+        with open('test.txt', 'w'): pass
+        starData = open('test.txt', 'a')
+        writeToData(starData, newDict, 'orginal')
+        writeToData(starData, _10SplitDict, '10')
+        writeToData(starData, _30SplitDict, '30')
+        writeToData(starData, _50SplitDict, '50')
+        writeToData(starData, _70SplitDict, '70')
+        writeToData(starData, _90SplitDict, '90')
+        writeToData(starData, _110SplitDict, '110')
+        writeToData(starData, _130SplitDict, '130')
+        writeToData(starData, _150SplitDict, '150')
+        writeToData(starData, _170SplitDict, '170')
+        writeToData(starData, _190SplitDict, '190')
         # print(newDict)
-        print('Old dict size: {}'.format(len(originalDict)))
-        print('New dict size: {}'.format(len(newDict)))
+        # print('Old dict size: {}'.format(len(originalDict)))
+        # print('New dict size: {}'.format(len(newDict)))
 
-        dic2 = dict(sorted(newDict.items(), key=lambda x: x[1]))
-        starData.write("___HHMMSS\n")
-        starData.write(("1st: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-1], list(dic2.values())[-1])))
-        starData.write(("2nd: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-2], list(dic2.values())[-2])))
-        starData.write(("3rd: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-3], list(dic2.values())[-3])))
-        starData.write(("4th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-4], list(dic2.values())[-4])))
-        starData.write(("5th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-5], list(dic2.values())[-5])))
-        starData.write(("6th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-6], list(dic2.values())[-6])))
-        # starData.write(("7th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-7], list(dic2.values())[-7])))
-        # starData.write(("8th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-8], list(dic2.values())[-8])))
-        # starData.write(("9th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-9], list(dic2.values())[-9])))
-        # starData.write(("10th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-10], list(dic2.values())[-10])))
-        sumOfData = sum(dic2.values())
-        numOfData = len(dic2)
-        avg = (sumOfData / numOfData) + nSplitter
-        starData.write("Avg: {}\n".format(avg))
-        starData.write('\n')
 
-        # Write to the text file stars :: Perhaps didive by 10 or something to lower it's meaning 270 -> 27 stars
-        for x, y in newDict.items():
-            # print(x,":",y)
-            # print('Start at',x,'\t', end ="")
-            starData.write(("Start at {} *:{}\t".format(x, y)))
-            for n in range(y):
-                starData.write(('*'))
-            # print("*", end ="")
-            # print()
-            starData.write("\n")
 
-        print('LOOK AT ME!!!')
+
 
 
 
@@ -142,18 +191,18 @@ class CalculateData:
             yield {k: data[k] for k in islice(it, SIZE)}
 
 
-    def declareDics(self):
-        self.originalDict = dict()
-        self._10SplitDict = dict()
-        self._30SplitDict = dict()
-        self._50SplitDict = dict()
-        self._70SplitDict = dict()
-        self._90SplitDict = dict()
-        self._110SplitDict = dict()
-        self._130SplitDict = dict()
-        self._150SplitDict = dict()
-        self._170SplitDict = dict()
-        self._190SplitDict = dict()
+    # def declareDics(self):
+    #     self.originalDict = dict()
+    #     self._10SplitDict = dict()
+    #     self._30SplitDict = dict()
+    #     self._50SplitDict = dict()
+    #     self._70SplitDict = dict()
+    #     self._90SplitDict = dict()
+    #     self._110SplitDict = dict()
+    #     self._130SplitDict = dict()
+    #     self._150SplitDict = dict()
+    #     self._170SplitDict = dict()
+    #     self._190SplitDict = dict()
 
 
 # Looks to see of the first character is a negative sign
