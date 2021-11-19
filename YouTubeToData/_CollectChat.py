@@ -1,3 +1,4 @@
+# This file will gather chat data and place it in a text file, mostly time stamps
 import json
 import pytchat
 import _GetDataAndStars
@@ -11,13 +12,8 @@ class collectChat:
         self.video_name = video_name
         self.file_name = file_name
 
-
-        # We don't want to empty this file out
-        # self.f = open(str(self.file_name) + 'ChatData.txt', 'w')  /// self.data_file_name
-
-
+        # Place video ID into the program and
         self.chat = pytchat.create(video_id)
-
         self.dataCollecter()
 
     def dataCollecter(self):

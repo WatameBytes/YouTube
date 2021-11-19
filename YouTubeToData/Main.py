@@ -2,11 +2,7 @@ import _Gui
 import _CollectChat
 
 def main():
-    # Turn all of this data into an object to easily call it and deal with it
-    # Remove all the selfs and classes, this isn't needed
-    # Just create a data object that we can pass
     # _Gui.DisplayTheProgram()
-
     link_of_youtube_video = 'https://www.youtube.com/watch?v=VupT9JCJaOY'
     video_id = 'VupT9JCJaOY'
     streamer_name = 'watson'

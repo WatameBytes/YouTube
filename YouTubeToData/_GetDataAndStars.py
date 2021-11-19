@@ -1,3 +1,7 @@
+# Using the chat timestmaps, create a dictionary that will count the occurences
+# and show us the most popular times within a time frame
+# The time shown is where to start
+
 import string
 from itertools import islice
 
