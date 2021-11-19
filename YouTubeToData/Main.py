@@ -9,6 +9,7 @@ def main():
     video_name = 'MythOrTreat'
     file_name = 'watson:MythOrTreat'
     _CollectChat.collectChat(link_of_youtube_video, video_id, streamer_name, video_name, file_name)
+    # Test this sync
 
 if __name__ == '__main__':
     main()
