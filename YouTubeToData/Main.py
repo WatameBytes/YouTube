@@ -9,7 +9,7 @@ def main():
 
 if __name__ == '__main__':
     # main()
-    justName = 'moona:turingLove_ChatData'
+    justName = 'moona:turingLove'
     nameOfSaveFile = 'moona:turingLove_ChatData.txt'
     _GetDataAndStars.CalculateData(nameOfSaveFile, justName)
 

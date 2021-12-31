@@ -37,11 +37,11 @@ def writeToData(starData, newDict, nameOfDict):
         starData.write(("8th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-8], list(dic2.values())[-8])))
         starData.write(("9th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-9], list(dic2.values())[-9])))
         starData.write(("10th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-10], list(dic2.values())[-10])))
-        starData.write(("10th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-11], list(dic2.values())[-11])))
-        starData.write(("10th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-12], list(dic2.values())[-12])))
-        starData.write(("10th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-13], list(dic2.values())[-13])))
-        starData.write(("10th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-14], list(dic2.values())[-14])))
-        starData.write(("10th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-15], list(dic2.values())[-15])))
+        starData.write(("11th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-11], list(dic2.values())[-11])))
+        starData.write(("12th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-12], list(dic2.values())[-12])))
+        starData.write(("13th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-13], list(dic2.values())[-13])))
+        starData.write(("14th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-14], list(dic2.values())[-14])))
+        starData.write(("15th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-15], list(dic2.values())[-15])))
 
     except:
         pass
@@ -87,33 +87,14 @@ def chunks(data, SIZE=1000000):
 # Python requires that we work top-down...
 class CalculateData:
     def __init__(self, chatDataFile, justTheName):
+        self.file = open(chatDataFile)
 
-        self.file = open(chatDataFile) # Place filer we had into an instance variable
-
-        # self.declareDics()  # Create the covers
-
+        # Counts how many instances a timestamp appears :: plus removes negative values
         self.timeToDict() # Create the original
-
-        # improvedDicts = [
-        #     self._10SplitDict,
-        #     self._30SplitDict,
-        #     self._50SplitDict,
-        #     self._70SplitDict,
-        #     self._90SplitDict,
-        #     self._110SplitDict,
-        #     self._130SplitDict,
-        #     self._150SplitDict,
-        #     self._170SplitDict,
-        #     self._190SplitDict
-        # ]
 
         valuesForDicts = [
             10, 30, 50, 70, 90, 110, 130, 150, 170, 190
         ]
-
-        # TODO BREAK HERE AT THIS METHOD
-        # Make a for loop
-        # TODO : Please refactor this :: Im getting triggered
 
         printDic(originalDict)
 
@@ -131,9 +112,10 @@ class CalculateData:
         copyOrgignalToNew(originalDict, _190SplitDict, 190)
 
         # Empties the file
+        with open(justTheName + '_StarData.txt', 'w'): pass
 
-        with open(justTheName + '_starData.txt', 'w'): pass
-        starData = open('test.txt', 'a')
+        starData = open(justTheName + '_StarData.txt', 'a')
+
         writeToData(starData, newDict, 'orginal')
         writeToData(starData, _10SplitDict, '10')
         writeToData(starData, _30SplitDict, '30')
@@ -148,11 +130,6 @@ class CalculateData:
         print(newDict)
         print('Old dict size: {}'.format(len(originalDict)))
         print('New dict size: {}'.format(len(newDict)))
-
-
-
-
-
 
 
     # Places the data into a dictionary for us to use
