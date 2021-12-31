@@ -68,7 +68,7 @@ def gui():
             # video_id: L30zTyxZ8mo
             # streamer_name: fauna
             # video_name: faunaOnline
-            print("link:{}\nid:{}\nstreamer_name:{}\nvideo_name:{}".format(link_of_video, video_id, streamer_name, video_name))
+            # print("link:{}\nid:{}\nstreamer_name:{}\nvideo_name:{}".format(link_of_video, video_id, streamer_name, video_name))
 
             collectChat(link_of_video, video_id, streamer_name, video_name)
 

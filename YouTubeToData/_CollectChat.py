@@ -20,18 +20,20 @@ class collectChat:
         self.dataCollecter()
 
     def dataCollecter(self):
+        self.justName = self.streamer_name + ":" + self.video_name
+        self.nameOfSaveFile = self.justName + "_ChatData.txt"
+        self.file = open(self.nameOfSaveFile, 'w')
+
         # pytchat is our algorithm that scans YouTube chat
-        # while self.chat.is_alive():
-        #     for c in self.chat.get().items:
-        #         obj = c.json()
-        #         obj2 = json.loads(obj)
-        #         self.f.write(("{}".format(obj2['elapsedTime']) + "\n"))
-        # self.f.close()
+        while self.chat.is_alive():
+            for c in self.chat.get().items:
+                obj = c.json()
+                obj2 = json.loads(obj)
+                self.file.write(("{}".format(obj2['elapsedTime']) + "\n"))
+        self.file.close()
 
         print("Video ID: {} has finished collecting chat data".format(self.video_id))
-
-        self.nameOfSaveFile = self.streamer_name + ":" + self.video_name + "_ChatData.txt"
         print('nameOfSaveFile: {}'.format(self.nameOfSaveFile))
 
 
-        # _GetDataAndStars.CalculateData(self.data_file_name, self.link_of_youtube_video, self.file_name)
+        _GetDataAndStars.CalculateData(self.nameOfSaveFile, self.justName)

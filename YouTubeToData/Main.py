@@ -1,11 +1,17 @@
 import _Gui
 
+import _GetDataAndStars
+# TODO: Make the Gui a class or allow us to edit it while a thread is running
+
 def main():
     _Gui.display_The_Program() # Display the GUI for us [Pretty model]
     _Gui.gui() # The logic that reads and parse input in the gui [Logic]
 
 if __name__ == '__main__':
-    main()
+    # main()
+    justName = 'moona:turingLove_ChatData'
+    nameOfSaveFile = 'moona:turingLove_ChatData.txt'
+    _GetDataAndStars.CalculateData(nameOfSaveFile, justName)
 
 # Logic for the program [Documentation]
 # Main.py --> _Gui.py

@@ -47,6 +47,7 @@ def writeToData(starData, newDict, nameOfDict):
         pass
 
     sumOfData = sum(dic2.values())
+
     numOfData = len(dic2)
     avg = (sumOfData / numOfData) + nSplitter
     starData.write("Avg: {}\n".format(avg))
@@ -85,14 +86,14 @@ def chunks(data, SIZE=1000000):
 
 # Python requires that we work top-down...
 class CalculateData:
-    def __init__(self, data_file_name, link_of_youtube_video, nameOfCommentFile):
+    def __init__(self, chatDataFile, justTheName):
 
-        self.file = open(data_file_name) # Place filer we had into an instance variable
-        # Have multiple data points to look for
+        self.file = open(chatDataFile) # Place filer we had into an instance variable
+
         # self.declareDics()  # Create the covers
 
         self.timeToDict() # Create the original
-        #
+
         # improvedDicts = [
         #     self._10SplitDict,
         #     self._30SplitDict,
@@ -105,20 +106,18 @@ class CalculateData:
         #     self._170SplitDict,
         #     self._190SplitDict
         # ]
+
         valuesForDicts = [
             10, 30, 50, 70, 90, 110, 130, 150, 170, 190
         ]
 
         # TODO BREAK HERE AT THIS METHOD
-
         # Make a for loop
-
-
         # TODO : Please refactor this :: Im getting triggered
 
         printDic(originalDict)
 
-        copyOrgignalToNew(originalDict, newDict,20)
+        copyOrgignalToNew(originalDict, newDict, 20)
 
         copyOrgignalToNew(originalDict, _10SplitDict, 10)
         copyOrgignalToNew(originalDict, _30SplitDict, 30)
@@ -132,7 +131,8 @@ class CalculateData:
         copyOrgignalToNew(originalDict, _190SplitDict, 190)
 
         # Empties the file
-        with open('test.txt', 'w'): pass
+
+        with open(justTheName + '_starData.txt', 'w'): pass
         starData = open('test.txt', 'a')
         writeToData(starData, newDict, 'orginal')
         writeToData(starData, _10SplitDict, '10')
@@ -145,9 +145,9 @@ class CalculateData:
         writeToData(starData, _150SplitDict, '150')
         writeToData(starData, _170SplitDict, '170')
         writeToData(starData, _190SplitDict, '190')
-        # print(newDict)
-        # print('Old dict size: {}'.format(len(originalDict)))
-        # print('New dict size: {}'.format(len(newDict)))
+        print(newDict)
+        print('Old dict size: {}'.format(len(originalDict)))
+        print('New dict size: {}'.format(len(newDict)))
 
 
 
