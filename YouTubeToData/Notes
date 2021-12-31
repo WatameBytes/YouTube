@@ -1,9 +1,0 @@
-Create an exe file??
-
-Go to the folder with the files you want
-
-pip install pyinstaller
-
-pyinstaller --onefile Main.py
-
-Exe in dist file
