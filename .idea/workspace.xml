@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e96aa5cf-9dce-449f-a1b5-16208450a098" name="Changes" comment="It works&#10;Needs some QOL and refactors">
-      <change beforePath="$PROJECT_DIR$/YouTubeToData/_Gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/YouTubeToData/_Gui.py" afterDir="false" />
+    <list default="true" id="e96aa5cf-9dce-449f-a1b5-16208450a098" name="Changes" comment="Added Popups to indicate task">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/fdgdfgdfg:ghjjhgghj_ChatData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/fdgdfgdfg:ghjjhgghj_StarData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/gfghf:dsads_ChatData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/gfghf:dsads_StarData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/hjhjk:hhjkhjk_ChatData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/hjhjk:hhjkhjk_StarData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/hjhjkhjk:hjjhkhjkhkjkhj_ChatData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/hjhjkhjk:hjjhkhjkhkjkhj_StarData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/hjkhjkhjk:hjkjhhjk_ChatData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/hjkhjkhjk:hjkjhhjk_StarData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/hjkjkh:kjjkl_ChatData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/hjkjkh:kjjkl_StarData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/jhkhjk:hhjhjkhjk_ChatData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/jhkhjk:hhjhjkhjk_StarData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/moona:turningLove_ChatData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/moona:turningLove_StarData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/test.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +270,7 @@
       <workItem from="1637311713915" duration="6806000" />
       <workItem from="1637477605751" duration="57000" />
       <workItem from="1640921678194" duration="777000" />
-      <workItem from="1640930270779" duration="15573000" />
+      <workItem from="1640930270779" duration="16188000" />
     </task>
     <task id="LOCAL-00001" summary="Using a YouTube import to create a Python program that will grab chat activity and graph it to see popularity.">
       <created>1636331551251</created>
@@ -402,7 +419,21 @@
       <option name="project" value="LOCAL" />
       <updated>1640942947802</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added Popups to indicate task">
+      <created>1640951110581</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1640951110581</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Added Popups to indicate task">
+      <created>1640951124539</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1640951124539</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,7 +469,8 @@
     <MESSAGE value="Everything works till GetDataAndStars" />
     <MESSAGE value="BEfore deleting the comments" />
     <MESSAGE value="It works&#10;Needs some QOL and refactors" />
-    <option name="LAST_COMMIT_MESSAGE" value="It works&#10;Needs some QOL and refactors" />
+    <MESSAGE value="Added Popups to indicate task" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Popups to indicate task" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
