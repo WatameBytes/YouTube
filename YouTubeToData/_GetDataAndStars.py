@@ -83,7 +83,7 @@ def chunks(data, SIZE=1000000):
         yield {k: data[k] for k in islice(it, SIZE)}
 
 
-
+# Python requires that we work top-down...
 class CalculateData:
     def __init__(self, data_file_name, link_of_youtube_video, nameOfCommentFile):
 

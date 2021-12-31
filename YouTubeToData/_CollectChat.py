@@ -4,35 +4,34 @@ import pytchat
 import _GetDataAndStars
 
 class collectChat:
-    # constructor
-    def __init__(self, link_of_youtube_video, video_id, streamer_name, video_name,file_name):
+    # Python Constructor
+    def __init__(self, link_of_youtube_video, video_id, streamer_name, video_name):
+        # Self is like the keyword 'this' in Java/JavaScript
         self.link_of_youtube_video = link_of_youtube_video
         self.video_id = video_id
         self.streamer_name = streamer_name
         self.video_name = video_name
-        self.file_name = file_name
+        # Just print the id to show it's in the works
+        print("Video ID: {} has started collecting chat data".format(self.video_id))
 
-        # Place video ID into the program and
+        # Place the video ID into an instance variable
         self.chat = pytchat.create(video_id)
+        # Calls the function that makes use of that video_id
         self.dataCollecter()
 
     def dataCollecter(self):
-
+        # pytchat is our algorithm that scans YouTube chat
         # while self.chat.is_alive():
         #     for c in self.chat.get().items:
         #         obj = c.json()
         #         obj2 = json.loads(obj)
         #         self.f.write(("{}".format(obj2['elapsedTime']) + "\n"))
         # self.f.close()
-        # File, Source, nameOfCommentFile()
 
-        print("Source: {}\n nameOfCommentFile: {}".format(self.link_of_youtube_video, str(self.file_name) + 'ChatData.txt'))
-        self.data_file_name = 'watson:MythOrTreatChatData.txt'
+        print("Video ID: {} has finished collecting chat data".format(self.video_id))
 
-        _GetDataAndStars.CalculateData(self.data_file_name, self.link_of_youtube_video, self.file_name)
-
+        self.nameOfSaveFile = self.streamer_name + ":" + self.video_name + "_ChatData.txt"
+        print('nameOfSaveFile: {}'.format(self.nameOfSaveFile))
 
 
-
-
-
+        # _GetDataAndStars.CalculateData(self.data_file_name, self.link_of_youtube_video, self.file_name)
