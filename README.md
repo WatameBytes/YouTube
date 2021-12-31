@@ -17,7 +17,7 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot]()
+![theApp](https://user-images.githubusercontent.com/64375555/147840728-5460cad9-c1f1-4b64-867e-fb9e7a892e30.png)
 
 ## Key Features
 
@@ -57,5 +57,5 @@ This software uses the following open source packages:
 GPL-3.0 License
 
 ---
-> GitHub [@ArisaBonsaiTree](https://github.com/ArisaBonsaiTree) &nbsp;&middot;&nbsp;
+> GitHub [@ArisaBonsaiTree](https://github.com/ArisaBonsaiTree)
 
