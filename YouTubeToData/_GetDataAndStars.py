@@ -96,8 +96,6 @@ class CalculateData:
             10, 30, 50, 70, 90, 110, 130, 150, 170, 190
         ]
 
-        printDic(originalDict)
-
         copyOrgignalToNew(originalDict, newDict, 20)
 
         copyOrgignalToNew(originalDict, _10SplitDict, 10)
@@ -127,11 +125,8 @@ class CalculateData:
         writeToData(starData, _150SplitDict, '150')
         writeToData(starData, _170SplitDict, '170')
         writeToData(starData, _190SplitDict, '190')
-        print(newDict)
-        print('Old dict size: {}'.format(len(originalDict)))
-        print('New dict size: {}'.format(len(newDict)))
 
-
+        print('{} has finished computing'.format(justTheName))
     # Places the data into a dictionary for us to use
     def timeToDict(self):
         # Loop through each line of the file
