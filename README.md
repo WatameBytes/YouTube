@@ -46,6 +46,8 @@ $ python Main.py
 
 Note: If you want to collect data from multiple videos, you'll need to open a new app instance.
 
+After placing the entire link, name of the YouTube[not important] followed with a colon [:], type the name of the video. Can be anything you want, so long as there is no space. A file with that name should appear with _ChatData.txt appended on it. Just a file with timestamps of when someone typed something. The _StarData.txt grabs those numbers, omits negative timestamps/prestream chat, and ranks them in order of the most popular timestamps to a least populat timestamp. It will display the splitter, how big a range is, their ranking with timestamps, and the amount of comments since the beginning of that time stamp
+
 ## Credits
 
 This software uses the following open source packages:
