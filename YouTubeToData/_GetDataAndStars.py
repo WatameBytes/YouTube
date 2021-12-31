@@ -9,8 +9,6 @@ originalDict = dict()
 newDict = dict()
 nSplitter = 20
 
-
-
 _10SplitDict = dict()
 _30SplitDict = dict()
 _50SplitDict = dict()

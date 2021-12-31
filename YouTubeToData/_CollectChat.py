@@ -35,5 +35,4 @@ class collectChat:
         print("Video ID: {} has finished collecting chat data".format(self.video_id))
         print('nameOfSaveFile: {}'.format(self.nameOfSaveFile))
 
-
         _GetDataAndStars.CalculateData(self.nameOfSaveFile, self.justName)

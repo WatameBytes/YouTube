@@ -57,7 +57,6 @@ def gui():
             # Amelia:[NameOfVideo] <--- [IS WHAT WE STORE]
             video_name = str(userInput[1]).split(streamer_video_divider)[1]
 
-
             # if(video_name == ''):
             #     raise ValueError("Video name can't be empty")
 

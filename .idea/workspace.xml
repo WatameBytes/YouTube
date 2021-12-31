@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e96aa5cf-9dce-449f-a1b5-16208450a098" name="Changes" comment="Added Popups to indicate task">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/Main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/Notes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/YouTubeToData/fdgdfgdfg:ghjjhgghj_ChatData.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/YouTubeToData/fdgdfgdfg:ghjjhgghj_StarData.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/YouTubeToData/gfghf:dsads_ChatData.txt" beforeDir="false" />
@@ -23,6 +24,7 @@
       <change beforePath="$PROJECT_DIR$/YouTubeToData/moona:turningLove_ChatData.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/YouTubeToData/moona:turningLove_StarData.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/YouTubeToData/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/import_me.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +78,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -271,6 +274,7 @@
       <workItem from="1637477605751" duration="57000" />
       <workItem from="1640921678194" duration="777000" />
       <workItem from="1640930270779" duration="16188000" />
+      <workItem from="1640992628585" duration="57000" />
     </task>
     <task id="LOCAL-00001" summary="Using a YouTube import to create a Python program that will grab chat activity and graph it to see popularity.">
       <created>1636331551251</created>

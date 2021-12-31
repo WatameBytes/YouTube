@@ -1,7 +1,5 @@
 import _Gui
-
 import _GetDataAndStars
-# TODO: Make the Gui a class or allow us to edit it while a thread is running
 
 def main():
     _Gui.display_The_Program() # Display the GUI for us [Pretty model]
