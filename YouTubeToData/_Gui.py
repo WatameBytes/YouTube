@@ -69,9 +69,9 @@ def gui():
             # streamer_name: fauna
             # video_name: faunaOnline
             # print("link:{}\nid:{}\nstreamer_name:{}\nvideo_name:{}".format(link_of_video, video_id, streamer_name, video_name))
-
+            sg.popup('Collecting data')
             collectChat(link_of_video, video_id, streamer_name, video_name)
-
+            sg.popup('Complete')
         window.close()
 
     # The catch statements for out try statements
@@ -89,4 +89,3 @@ def look_for_streamer_videoname_dividier(s):
         return True
     except ValueError:
         return False
-
