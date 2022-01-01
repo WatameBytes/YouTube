@@ -42,6 +42,11 @@ $ pyinstaller --onefile Main.py
 
 # Run the app
 $ python Main.py
+
+May need to install PySimpleGUI && pytchat
+```python
+python -m pip install SomePackage
+```
 ```
 
 Note: If you want to collect data from multiple videos, you'll need to open a new app instance.
