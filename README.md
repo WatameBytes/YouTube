@@ -45,6 +45,8 @@ $ python Main.py
 
 May need to install PySimpleGUI && pytchat
 python -m pip install SomePackage
+
+sudo apt-get install python3-tk
 ```
 
 Note: If you want to collect data from multiple videos, you'll need to open a new app instance.
