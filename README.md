@@ -43,10 +43,17 @@ $ pyinstaller --onefile Main.py
 # Run the app
 $ python Main.py
 
-May need to install PySimpleGUI && pytchat
+# May need to install PySimpleGUI && pytchat
 python -m pip install SomePackage
 
 sudo apt-get install python3-tk
+
+# If PyInstaller doesn't work for some reason
+python -m PyInstaller --onefile Main.py
+
+# python --> python3, depending on your system
+# Afterwards, go to dist and just run Main
+
 ```
 
 Note: If you want to collect data from multiple videos, you'll need to open a new app instance.
